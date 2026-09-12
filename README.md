@@ -1,6 +1,6 @@
 # kirby-audience-intel-profiler
 
-*This skill is part of the [Kirby Skills Collection](https://github.com/markkirby125/kirby-skills-collection).*
+*This skill is part of the [Tiffany Lambert PLR Skills Collection](https://github.com/markkirby125/kirby-skills-tiff-collection).*
 
 Extracts, formats, and validates subniche audience intelligence (insider jargon, daily friction, emotional triggers, taboo generic words) to tune generic content to specific buyer avatars.
 
@@ -24,6 +24,5 @@ Copy and paste this directly to your AI (Cursor, Windsurf, Claude Code, Antigrav
 
 ## Tech Stack
 
-- **Format**: Markdown / JSON / YAML
-- **Architecture**: Tier 1/2 Single File Specification
+- **Format**: Markdown / YAML Audience Intel Schema
 - **Compatibility**: Antigravity, Claude Code, Cursor, Windsurf, Cline
