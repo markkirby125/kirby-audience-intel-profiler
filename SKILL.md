@@ -11,37 +11,7 @@ triggers: [audience-dataset, subniche-lexicon, buyer-persona-intel, avatar-profi
 
 ---
 
-## 1. The Subniche Translation Problem
-
-Raw PLR and general AI drafts fail because they use **lowest-common-denominator language**. They address "business owners" looking to "grow their business." 
-
-No real human identifies as a "generic business owner":
-* A freelance developer cares about scope creep, client invoice delays, Git merge conflicts, and unbillable maintenance.
-* A Shopify brand owner cares about inventory reorder minimums, ad account bans on Meta, return rates, and shipping carrier surcharges.
-* A real estate agent cares about expired listings, open-house tire kickers, split commissions, and MLS compliance.
-
-The same underlying business concept (e.g., "follow up with leads promptly") requires completely different vocabulary, stakes, and metaphors for each audience. This skill extracts and organizes that domain intelligence.
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                    Generic Topic                        │
-│          "How to manage customer cancellations"         │
-└────────────────────────────┬────────────────────────────┘
-                             │
-            ┌────────────────┴────────────────┐
-            ▼                                 ▼
-┌───────────────────────────┐   ┌───────────────────────────┐
-│     SaaS Founder Intel    │   │  High-Ticket Coach Intel  │
-├───────────────────────────┤   ├───────────────────────────┤
-│ Terms: Churn, MRR, exit   │   │ Terms: Retention, deposit,│
-│ interview, Stripe billing │   │ scope dispute, onboarding │
-│ Stake: LTV/CAC ratio      │   │ Stake: Referral pipeline  │
-└───────────────────────────┘   └───────────────────────────┘
-```
-
----
-
-## 2. The 5 Core Intel Dimensions
+## 1. The 5 Core Intel Dimensions
 
 Every Subniche Audience Profile must capture five distinct dimensions:
 
@@ -69,7 +39,7 @@ Every Subniche Audience Profile must capture five distinct dimensions:
 
 ---
 
-## 3. Extraction Protocol
+## 2. Extraction Protocol
 
 To profile an audience with an operator or research an unfamiliar niche, execute this structured inquiry:
 
@@ -85,7 +55,7 @@ Analyze the target micro-audience: [Insert Niche, e.g., Boutique Fitness Gym Own
 
 ---
 
-## 4. Audience Intel Profile Schema
+## 3. Audience Intel Profile Schema
 
 Save the profile as `audience_intel_[slug].json` or `.yaml`:
 
@@ -129,10 +99,21 @@ audience_profile:
 
 ---
 
-## 5. Integration with Personalization Engine
+## 4. Integration with Personalization Engine
 
 When running `kirby-plr-personalizer`:
 1. Ingest `audience_profile.yaml`.
 2. Automatically inject the `lexicon_whitelist` into the prompt's vocabulary requirement.
 3. Pass `taboo_generic_terms` into the negative prompt constraints.
 4. Ground all metaphors in the `daily_friction_points`.
+
+---
+
+## 5. Verification Checklist
+
+Before finalizing the Subniche Audience Profile, verify the following bounds:
+- [ ] Have at least 8 specific jargon terms been identified in the `lexicon_whitelist`?
+- [ ] Have at least 5 generic terms been explicitly banned?
+- [ ] Are the `daily_friction_points` concrete actions or events, rather than abstract emotions?
+- [ ] Is the output properly formatted to match the provided YAML/JSON schema?
+- [ ] Has the resulting profile been saved for integration with downstream skills?
