@@ -1,6 +1,6 @@
 ---
 name: kirby-audience-intel-profiler
-description: "Extracts, formats, and validates subniche audience intelligence (insider jargon, daily friction, emotional triggers, taboo generic words) to tune generic content to specific buyer avatars."
+description: "Use when building or validating a subniche audience intel profile (jargon, daily friction, taboo generic words) for PLR personalisation."
 category: research
 triggers: [audience-dataset, subniche-lexicon, buyer-persona-intel, avatar-profiler, audience-intel, subniche-profiler]
 ---
@@ -57,7 +57,7 @@ Analyze the target micro-audience: [Insert Niche, e.g., Boutique Fitness Gym Own
 
 ## 3. Audience Intel Profile Schema
 
-Save the profile as `audience_intel_[slug].json` or `.yaml`:
+Save the profile as `audience_profile.yaml`:
 
 ```yaml
 ---
@@ -102,7 +102,7 @@ audience_profile:
 ## 4. Integration with Personalization Engine
 
 When running `kirby-plr-personalizer`:
-1. Ingest `audience_profile.yaml`.
+1. Ingest `audience_profile.yaml` (this is the only audience filename the suite uses).
 2. Automatically inject the `lexicon_whitelist` into the prompt's vocabulary requirement.
 3. Pass `taboo_generic_terms` into the negative prompt constraints.
 4. Ground all metaphors in the `daily_friction_points`.
