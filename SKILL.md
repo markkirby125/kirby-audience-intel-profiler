@@ -3,6 +3,9 @@ name: kirby-audience-intel-profiler
 description: "Use when building or validating a subniche audience intel profile (jargon, daily friction, taboo generic words) for PLR personalisation."
 category: research
 triggers: [audience-dataset, subniche-lexicon, buyer-persona-intel, avatar-profiler, audience-intel, subniche-profiler]
+risk: unverified
+author: william-fitzpatrick
+tags: [kirby, ai-agent, workflow]
 ---
 
 # SOP: Subniche Audience Intel Extraction & Profiling
@@ -117,3 +120,14 @@ Before finalizing the Subniche Audience Profile, verify the following bounds:
 - [ ] Are the `daily_friction_points` concrete actions or events, rather than abstract emotions?
 - [ ] Is the output properly formatted to match the provided YAML/JSON schema?
 - [ ] Has the resulting profile been saved for integration with downstream skills?
+
+
+## Examples
+
+*(Add specific conversational examples here showing how the agent should behave.)*
+
+
+## Limitations (When NOT to Use)
+
+- Do not use this skill outside of its intended scope.
+- Stop and ask the user for clarification if the requirements are ambiguous.
