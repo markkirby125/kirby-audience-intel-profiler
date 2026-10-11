@@ -4,7 +4,7 @@ description: "Use when building or validating a subniche audience intel profile 
 category: research
 triggers: [audience-dataset, subniche-lexicon, buyer-persona-intel, avatar-profiler, audience-intel, subniche-profiler]
 risk: unverified
-author: william-fitzpatrick
+author: paul-kirby
 tags: [kirby, ai-agent, workflow]
 ---
 
